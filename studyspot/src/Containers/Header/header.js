@@ -1,9 +1,9 @@
 import React from "react";
-import AuxComp from "../../HOC/auxcomp";
 import { NavLink } from "react-router-dom";
+import classes from "./header.css";
 
 const Header = (props) => (
-  <AuxComp>
+  <div className={classes.header}>
     <NavLink exact to="/">
       Home
     </NavLink>
@@ -13,7 +13,7 @@ const Header = (props) => (
     <NavLink exact to="/todo">
       ToDo List
     </NavLink>
-  </AuxComp>
+  </div>
 );
 
 export default Header;
