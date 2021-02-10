@@ -1,10 +1,11 @@
 import React from "react";
 import classes from "../Layout/layout.css";
 import AuxComp from "../../HOC/auxcomp";
+import Header from "../../Containers/Header/header";
 
 const Layout = (props) => (
   <AuxComp>
-    <div className={classes.header2}>Header</div>
+    <Header />
     <div>{props.children}</div>
   </AuxComp>
 );
