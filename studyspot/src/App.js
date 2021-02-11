@@ -19,11 +19,9 @@ class App extends Component {
       </Switch>
     );
     return (
-      <div>
-        <Router>
-          <Layout>{routes}</Layout>
-        </Router>
-      </div>
+      <Router>
+        <Layout>{routes}</Layout>
+      </Router>
     );
   }
 }

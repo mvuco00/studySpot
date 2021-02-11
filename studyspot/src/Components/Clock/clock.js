@@ -1,6 +1,5 @@
 import React, { Component } from "react";
-import AuxComp from "../../HOC/auxcomp";
-
+import classes from "./clock.css";
 function realTimeClock() {
   var rtClock = new Date();
   var hours = rtClock.getHours();
@@ -32,11 +31,12 @@ class Clock extends Component {
   }
   render() {
     return (
-      <AuxComp>
-        <div>CLOCK</div>
-
-        <div>{`${this.state.clock.hours}:${this.state.clock.minutes}:${this.state.clock.seconds}`}</div>
-      </AuxComp>
+      <div className={classes.clockBg}>
+        <div>
+          <div>CLOCK</div>
+          <div>{`${this.state.clock.hours}:${this.state.clock.minutes}:${this.state.clock.seconds}`}</div>
+        </div>
+      </div>
     );
   }
 }

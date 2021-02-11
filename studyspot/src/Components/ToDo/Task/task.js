@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Button } from "reactstrap";
 import classes from "./task.css";
 class Task extends Component {
   state = {
@@ -15,13 +16,15 @@ class Task extends Component {
 
   render() {
     return (
-      <div>
+      <div className={classes.taskdiv}>
         <div className={this.state.style} onClick={this.handleClick}>
           {this.props.item}
         </div>
-        <button onClick={() => this.props.handleDelete(this.props.index)}>
-          DELETE
-        </button>
+
+        <Button
+          onClick={() => this.props.handleDelete(this.props.index)}
+          close
+        />
       </div>
     );
   }
