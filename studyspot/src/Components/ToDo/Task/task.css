@@ -1,0 +1,12 @@
+.task {
+  padding: 15px;
+  background-color: rgb(245, 198, 154);
+  margin-bottom: 10px;
+}
+
+.done {
+  text-decoration: line-through;
+  padding: 15px;
+  background-color: rgb(241, 229, 199);
+  margin-bottom: 10px;
+}
