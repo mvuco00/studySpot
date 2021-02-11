@@ -15,8 +15,13 @@ class Task extends Component {
 
   render() {
     return (
-      <div className={this.state.style} onClick={this.handleClick}>
-        {this.props.item}
+      <div>
+        <div className={this.state.style} onClick={this.handleClick}>
+          {this.props.item}
+        </div>
+        <button onClick={() => this.props.handleDelete(this.props.index)}>
+          DELETE
+        </button>
       </div>
     );
   }
