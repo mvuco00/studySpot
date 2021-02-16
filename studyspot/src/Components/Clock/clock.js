@@ -5,12 +5,15 @@ function realTimeClock() {
   var hours = rtClock.getHours();
   var minutes = rtClock.getMinutes();
   var seconds = rtClock.getSeconds();
+  var day = rtClock.getDate();
+  var month = rtClock.getMonth() + 1;
+  var year = rtClock.getFullYear();
 
   hours = ("0" + hours).slice(-2);
   minutes = ("0" + minutes).slice(-2);
   seconds = ("0" + seconds).slice(-2);
 
-  return { hours, minutes, seconds };
+  return { hours, minutes, seconds, day, month, year };
 }
 
 class Clock extends Component {
@@ -48,9 +51,15 @@ class Clock extends Component {
               />
             </svg>
           </div>
-          <div
-            className={classes.clock}
-          >{`${this.state.clock.hours}:${this.state.clock.minutes}:${this.state.clock.seconds}`}</div>
+          <div className={classes.clockanddate}>
+            <div className={classes.clock}>
+              {`${this.state.clock.hours}:${this.state.clock.minutes}:${this.state.clock.seconds}`}
+            </div>
+            <div className={classes.date}>
+              {this.state.clock.day} / {this.state.clock.month} /{" "}
+              {this.state.clock.year}
+            </div>
+          </div>
         </div>
       </div>
     );
