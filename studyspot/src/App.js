@@ -22,7 +22,7 @@ class App extends Component {
     return (
       <Router>
         <Layout>{routes}</Layout>
-        <Home />
+        <Home></Home>
       </Router>
     );
   }
