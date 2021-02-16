@@ -7,6 +7,7 @@ import {
 } from "react-router-dom";
 import Clock from "./Components/Clock/clock";
 import ToDo from "./Components/ToDo/todo";
+import Home from "./Components/Home/home";
 import Layout from "./Components/Layout/layout";
 
 class App extends Component {
@@ -21,6 +22,7 @@ class App extends Component {
     return (
       <Router>
         <Layout>{routes}</Layout>
+        <Home />
       </Router>
     );
   }

@@ -5,7 +5,7 @@ import { v4 as uuidv4 } from "uuid";
 
 class ToDo extends Component {
   state = {
-    todoList: ["Kupit mlijeko", "Napisat domaći"],
+    todoList: ["Kupit mlijeko", "Napravit kolač"],
     userInput: "",
   };
   handleInput = (e) => {

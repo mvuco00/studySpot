@@ -6,3 +6,22 @@
   height: 100vh;
   overflow: hidden;
 }
+
+.maindiv {
+  height: inherit;
+}
+.svgdiv {
+  display: flex;
+  justify-content: center;
+  margin: 35px 0 35px 0;
+}
+.clock {
+  height: inherit;
+  display: flex;
+  justify-content: center;
+  font-size: 90px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  color: rgba(51, 167, 86, 0.767);
+  padding-top: 20px;
+}
